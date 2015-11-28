@@ -35,7 +35,7 @@ if($donnees == null)
 	   {
 	   //Account dosent exists
 	   echo "Account does not exists! You will be redirected in 3 seconds.";
-	   header("refresh:3; url = http://localhost/log210/Login.html");
+	   header("refresh:3; url = http://localhost/log210/Index.html");
 	   $req->closeCursor();
        exit();
 	   }
@@ -71,7 +71,7 @@ else if($donnees['pass'] != $pass && $donnees != null)
 {
 	//wrong password dawg
 	echo "Wrong Password! You will be redirected in 3 seconds.";
-	header("refresh:3; url = http://localhost/log210/Login.html");
+	header("refresh:3; url = http://localhost/log210/Index.html");
 	$req->closeCursor();
     exit();
 }

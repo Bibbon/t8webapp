@@ -23,7 +23,7 @@ $req->execute(array(
 	));
 
 echo "Account Created! You will be redirected in 5 seconds";
-header("refresh:5; url = http://localhost/log210/Login.html");
+header("refresh:5; url = http://localhost/log210/Index.html");
 exit();
 
 	
