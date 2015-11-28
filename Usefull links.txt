@@ -1,0 +1,15 @@
+//Afficher du contenu provenant de la BD (MySQL) dans la page HTML
+http://www.w3schools.com/php/php_mysql_select.asp
+
+//Ajouter du contenu dansla BD en provenance de la page WEB
+http://www.w3schools.com/php/php_mysql_insert.asp
+
+//Fonctions PHP dans une page HTML
+http://stackoverflow.com/questions/20738329/how-to-call-a-php-function-on-the-click-of-a-button
+
+//Reference de l'API de eBay
+http://developer.ebay.com/devzone/product/CallRef/getProductDetails.html#Samples
+
+//Tutoriel API avec PHP
+http://developer.ebay.com/DevZone/finding/HowTo/GettingStarted_PHP_NV_XML/GettingStarted_PHP_NV_XML.html
+http://developer.ebay.com/DevZone/finding/HowTo/PHP_SearchInterm_NV_XML/PHP_SearchInterm_NV_XML.html

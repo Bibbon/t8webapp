@@ -1,0 +1,117 @@
+//INPUT
+
+<?xml version="1.0" encoding="utf-8"?>
+<getProductDetailsRequest xmlns="http://www.ebay.com/marketplace/marketplacecatalog/v1/services">
+  <!-- Call-specific Input Fields -->
+  <productDetailsRequest> ProductDetailsRequestType
+    <dataset> token </dataset>
+    <!-- ... more dataset values allowed here ... -->
+    <datasetPropertyName> string </datasetPropertyName>
+    <!-- ... more datasetPropertyName values allowed here ... -->
+    <productIdentifier> ProductIdentifier
+      <EAN> string </EAN>
+      <ePID> string </ePID>
+      <ISBN> string </ISBN>
+      <productId> string </productId>
+      <UPC> string </UPC>
+    </productIdentifier>
+    <productStatusFilter> ProductStatus
+      <excludeForeBayReviews> boolean </excludeForeBayReviews>
+      <excludeForeBaySelling> boolean </excludeForeBaySelling>
+      <excludeForHalfSelling> boolean </excludeForHalfSelling>
+    </productStatusFilter>
+  </productDetailsRequest>
+  <!-- ... more productDetailsRequest nodes allowed here ... -->
+</getProductDetailsRequest>
+
+//END INPUT
+
+//OUTPUT
+
+<?xml version="1.0" encoding="utf-8"?>
+<getProductDetailsResponse xmlns="http://www.ebay.com/marketplace/marketplacecatalog/v1/services">
+  <!-- Call-specific Output Fields -->
+  <product> Product
+    <compatibilityCount> int </compatibilityCount>
+    <notes> Notes
+      <noteDetails> PropertyValue
+        <propertyName> string </propertyName>
+        <value> Value
+          <number> NumericValue
+            <unitOfMeasurement> token </unitOfMeasurement>
+            <value> string </value>
+          </number>
+          <text> StringValue
+            <value> string </value>
+          </text>
+          <URL> URIValue
+            <value> anyURI </value>
+          </URL>
+        </value>
+        <!-- ... more value nodes allowed here ... -->
+      </noteDetails>
+      <!-- ... more noteDetails nodes allowed here ... -->
+    </notes>
+    <productDetails> PropertyValue
+      <propertyName> string </propertyName>
+      <value> Value
+        <number> NumericValue
+          <unitOfMeasurement> token </unitOfMeasurement>
+          <value> string </value>
+        </number>
+        <text> StringValue
+          <value> string </value>
+        </text>
+        <URL> URIValue
+          <value> anyURI </value>
+        </URL>
+      </value>
+      <!-- ... more value nodes allowed here ... -->
+    </productDetails>
+    <!-- ... more productDetails nodes allowed here ... -->
+    <productIdentifier> ProductIdentifier
+      <EAN> string </EAN>
+      <ePID> string </ePID>
+      <ISBN> string </ISBN>
+      <productId> string </productId>
+      <UPC> string </UPC>
+    </productIdentifier>
+    <productStatus> ProductStatus
+      <excludeForeBayReviews> boolean </excludeForeBayReviews>
+      <excludeForeBaySelling> boolean </excludeForeBaySelling>
+      <excludeForHalfSelling> boolean </excludeForHalfSelling>
+    </productStatus>
+    <stockPhotoURL> StockPhotoURL
+      <standard> URIValue
+        <value> anyURI </value>
+      </standard>
+      <thumbnail> URIValue
+        <value> anyURI </value>
+      </thumbnail>
+    </stockPhotoURL>
+    <type> string </type>
+  </product>
+  <!-- ... more product nodes allowed here ... -->
+  <!-- Standard Output Fields -->
+  <ack> AckValue </ack>
+  <errorMessage> ErrorMessage
+    <error> ErrorData
+      <category> ErrorCategory </category>
+      <domain> string </domain>
+      <errorId> long </errorId>
+      <exceptionId> token </exceptionId>
+      <message> string </message>
+      <parameter name="string"> ErrorParameter (string) </parameter>
+      <!-- ... more parameter nodes allowed here ... -->
+      <severity> ErrorSeverity </severity>
+      <subdomain> string </subdomain>
+    </error>
+    <!-- ... more error nodes allowed here ... -->
+  </errorMessage>
+  <timestamp> dateTime </timestamp>
+  <version> string </version>
+</getProductDetailsResponse>
+
+//END OUTPUT
+
+//Reference : http://developer.ebay.com/devzone/product/CallRef/getProductDetails.html#Samples 
